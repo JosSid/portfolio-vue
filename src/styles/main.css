@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .dark {
+    --bg-color: hsl(0, 0%, 31%);
+    --text-color: hsl(0, 0%, 90%);
+    /* Otros estilos para el tema oscuro */
+  }
+  
+  .light {
+    --bg-color: hsl(0, 0%, 90%);
+    --text-color: hsl(0, 0%, 31%);
+    /* Otros estilos para el tema claro */
+  }
+  

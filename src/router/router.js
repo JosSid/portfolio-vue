@@ -1,10 +1,10 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "../components/Home.vue";
+import HomePage from "../components/HomePage.vue";
 
 Vue.use(Router);
 
-const routes = [{ path: "/", name: "home", component: Home }];
+const routes = [{ path: "/", name: "home", component: HomePage }];
 
 const router = new Router({
   mode: "history",

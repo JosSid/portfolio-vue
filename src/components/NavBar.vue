@@ -1,5 +1,5 @@
 <template>
-  <nav class="burger__menu__wrapper">
+  <nav class="burger__menu__wrapper py-3">
     <label htmlFor="menu" class="burger__menu__label">
       <img
         @click="handleCheck"
@@ -16,33 +16,18 @@
       class="burger__menu__input"
     />
     <div class="burger__menu__list" @click="offCheck">
-      <Button
-        as="{Link}"
-        to="/"
-        type="button"
-        variant="primary"
-        class="loginForm-submit"
-      >
+      <router-link to="/" tag="button" type="button" class="btn btn-dark">
         Home
-      </Button>
-      <Button
-        as="{Link}"
+      </router-link>
+      <router-link
         to="/ads/new"
-        type="submit"
-        variant="primary"
-        class="loginForm-submit"
+        tag="button"
+        type="button"
+        class="btn btn-dark"
       >
         Create Ad
-      </Button>
-
-      <Button
-        type="submit"
-        variant="primary"
-        class="loginForm-submit"
-        @click="onLogout"
-      >
-        Log out
-      </Button>
+      </router-link>
+      <div class="burger__menu__item" @click="onLogout">Log out</div>
     </div>
   </nav>
 </template>
@@ -72,6 +57,7 @@ export default {
 <style>
 .burger__menu__wrapper {
   display: block;
+  margin-bottom: 30px;
 }
 
 .burger__menu__img {
@@ -90,6 +76,7 @@ export default {
   color: rgb(17, 14, 14);
   text-decoration: none;
   --clippy: polygon(0 0, 0 0, 0 100%, 0% 100%);
+  cursor: pointer;
 }
 
 .burger__menu__item::after {
@@ -120,10 +107,10 @@ export default {
 @media screen and (max-width: 768px) {
   .burger__menu__wrapper {
     display: block;
-    margin: 10px 20px 10px auto;
-    border: solid 2px black;
+    margin: 0 20px 10px auto;
+    border: solid 2px rgb(251, 249, 249);
     border-radius: 10px;
-    background: var(--background-primary-color, whitesmoke);
+    background: var(--background-primary-color, rgb(245, 245, 245));
     height: 60px;
     width: 60px;
     color: #fff;

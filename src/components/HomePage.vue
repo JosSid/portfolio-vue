@@ -1,14 +1,16 @@
 <template>
-  <div class="hello">
-    <h1 class="neon">{{ msg }}</h1>
+  <div>
+    <h1 class="neon title mt-5">{{ msg }}</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: "HelloWorld",
-  props: {
-    msg: String,
+  name: "HomePage",
+  data() {
+    return {
+      msg: "Jossid Factory",
+    };
   },
 };
 </script>
@@ -27,6 +29,12 @@ export default {
   }
 }
 .title {
-  font-size: 60px;
+  font-size: 130px;
+}
+
+@media screen and (max-width: 768px) {
+  .title {
+    font-size: 80px;
+  }
 }
 </style>
